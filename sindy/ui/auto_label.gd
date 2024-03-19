@@ -22,4 +22,3 @@ func _on_item_rect_changed():
 	add_theme_font_size_override("font_size", min_font_size)
 	set_text_auto_size(text)
 	queue_redraw()
-	
