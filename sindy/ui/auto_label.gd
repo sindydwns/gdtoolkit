@@ -1,7 +1,7 @@
 extends Label
 
 @export var max_font_size = 100
-@export var min_font_size = 10
+@export var min_font_size = 20
 
 func _ready():
 	set_text_auto_size(text)
