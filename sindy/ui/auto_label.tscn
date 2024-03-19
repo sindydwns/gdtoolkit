@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtvfosf6ybxbw"]
+
+[ext_resource type="Script" path="res://sindy/ui/auto_label.gd" id="1_ldo6l"]
+
+[node name="AutoLabel" type="Label"]
+offset_right = 100.0
+offset_bottom = 23.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+vertical_alignment = 1
+script = ExtResource("1_ldo6l")
+
+[connection signal="item_rect_changed" from="." to="." method="_on_item_rect_changed"]
