@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cj47jv06qb3q2"]
+
+[ext_resource type="Script" path="res://sindy/observer/int_reactive_property.gd" id="1_lbric"]
+
+[node name="IntReactiveProperty" type="Node"]
+script = ExtResource("1_lbric")

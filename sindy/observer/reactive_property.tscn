@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://pqqyus88pwmx"]
+
+[ext_resource type="Script" path="res://sindy/observer/reactive_property.gd" id="1_dej1y"]
+
+[node name="ReactiveProperty" type="Node"]
+script = ExtResource("1_dej1y")

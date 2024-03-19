@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://byt5guha4aqi7"]
+
+[ext_resource type="Script" path="res://sindy/observer/float_reactive_property.gd" id="1_1vp63"]
+
+[node name="FloatReactiveProperty" type="Node"]
+script = ExtResource("1_1vp63")
