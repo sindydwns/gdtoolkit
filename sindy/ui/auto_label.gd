@@ -4,9 +4,13 @@ extends Label
 @export var min_font_size = 20
 
 func _ready():
-	set_text_auto_size(text)
+	auto_size(text)
 
 func set_text_auto_size(text: String)->int:
+	set_text(text)
+	return auto_size(text)
+
+func auto_size(text: String)->int:
 	if text.is_empty():
 		add_theme_font_size_override("font_size", min_font_size)
 		return min_font_size
@@ -19,9 +23,9 @@ func set_text_auto_size(text: String)->int:
 	return font_size
 
 func _draw():
-	set_text_auto_size(text)
+	auto_size(text)
 
 func _on_item_rect_changed():
-	set_text_auto_size("")
-	set_text_auto_size(text)
+	auto_size("")
+	auto_size(text)
 	queue_redraw()
