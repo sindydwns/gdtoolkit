@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://cv300we1akvol"]
+
+[ext_resource type="Script" path="res://test/panel.gd" id="1_3tfxp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_72mdh"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_3tfxp")
+
+[node name="CenterContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Button1" type="Button" parent="CenterContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_72mdh")
+text = "알림 팝업"
+
+[node name="Button2" type="Button" parent="CenterContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_72mdh")
+text = "동의 팝업"
+
+[node name="Button3" type="Button" parent="CenterContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_72mdh")
+text = "토스트 팝업"
+
+[connection signal="pressed" from="CenterContainer/Button1" to="." method="_create_info_popup"]
+[connection signal="pressed" from="CenterContainer/Button2" to="." method="_create_confirm_popup"]
+[connection signal="pressed" from="CenterContainer/Button3" to="." method="_create_toast_popup"]
