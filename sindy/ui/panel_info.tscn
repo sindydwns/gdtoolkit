@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://baoytag4xc006"]
+
+[ext_resource type="Script" path="res://sindy/ui/panel_info.gd" id="1_xrfdi"]
+[ext_resource type="PackedScene" uid="uid://kwscoylmle8b" path="res://sindy/ui/background_button.tscn" id="2_pt2x5"]
+[ext_resource type="PackedScene" uid="uid://dtvfosf6ybxbw" path="res://sindy/ui/auto_label.tscn" id="3_fuehw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2tw8e"]
+
+[node name="PanelInfo" type="CanvasLayer"]
+script = ExtResource("1_xrfdi")
+
+[node name="BackgroundButton" parent="." instance=ExtResource("2_pt2x5")]
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.15
+anchor_right = 0.9
+anchor_bottom = 0.8
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ContentPanel" type="MarginContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/VBoxContainer/ContentPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AutoLabel" parent="Panel/VBoxContainer/ContentPanel/ScrollContainer" instance=ExtResource("3_fuehw")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+horizontal_alignment = 1
+autowrap_mode = 3
+max_font_size = 50
+
+[node name="ConfirmPanel" type="CenterContainer" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 100)
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer/ConfirmPanel"]
+custom_minimum_size = Vector2(150, 80)
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2tw8e")
+text = "Confirm"
+
+[connection signal="pressed" from="BackgroundButton" to="." method="confirm"]
+[connection signal="pressed" from="Panel/VBoxContainer/ConfirmPanel/Button" to="." method="accept"]
