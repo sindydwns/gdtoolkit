@@ -1,0 +1,98 @@
+[gd_scene load_steps=2 format=3 uid="uid://lk262bi3h05k"]
+
+[ext_resource type="PackedScene" uid="uid://dtvfosf6ybxbw" path="res://sindy/ui/auto_label.tscn" id="2_4rf2a"]
+
+[node name="Main" type="Node"]
+
+[node name="VSplitContainer" type="VSplitContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HSplitContainer1" type="HSplitContainer" parent="VSplitContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ColorRect1" type="ColorRect" parent="VSplitContainer/HSplitContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.00392157, 0.00392157, 0.00392157, 1)
+
+[node name="AutoLabel" parent="VSplitContainer/HSplitContainer1/ColorRect1" instance=ExtResource("2_4rf2a")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.06
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 22
+text = "적에게 치명적인 공격을 받으면 일정 확률로 다시 살아 남."
+autowrap_mode = 3
+
+[node name="ColorRect2" type="ColorRect" parent="VSplitContainer/HSplitContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.00392157, 0.00392157, 0.00392157, 1)
+
+[node name="AutoLabel" parent="VSplitContainer/HSplitContainer1/ColorRect2" instance=ExtResource("2_4rf2a")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.06
+text = "text"
+min_font_size = 30
+
+[node name="HSplitContainer2" type="HSplitContainer" parent="VSplitContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ColorRect1" type="ColorRect" parent="VSplitContainer/HSplitContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.00392157, 0.00392157, 0.00392157, 1)
+
+[node name="AutoLabel" parent="VSplitContainer/HSplitContainer2/ColorRect1" instance=ExtResource("2_4rf2a")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.06
+text = "text"
+min_font_size = 30
+
+[node name="ColorRect2" type="ColorRect" parent="VSplitContainer/HSplitContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.00392157, 0.00392157, 0.00392157, 1)
+
+[node name="AutoLabel" parent="VSplitContainer/HSplitContainer2/ColorRect2" instance=ExtResource("2_4rf2a")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.06
+text = "text"
+min_font_size = 30
