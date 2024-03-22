@@ -61,5 +61,5 @@ layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_2tw8e")
 text = "Confirm"
 
-[connection signal="pressed" from="BackgroundButton" to="." method="confirm"]
+[connection signal="pressed" from="BackgroundButton" to="." method="accept"]
 [connection signal="pressed" from="Panel/VBoxContainer/ConfirmPanel/Button" to="." method="accept"]
